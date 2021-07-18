@@ -129,6 +129,6 @@ export const styles = StyleSheet.create({
     top : '80%'
   },
   categoriesproductName: {
-    color: '#fff',
+    color: '#000',
   },
 });

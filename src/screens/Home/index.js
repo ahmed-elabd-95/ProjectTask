@@ -125,7 +125,7 @@ export const Home = ({navigation}) => {
           </TouchableOpacity>
         </View>
         <FlatList
-          data={featuredData}
+          data={data.slice(0, 5)}
           contentContainerStyle={{
             alignItems: 'center',
             flex: 1,
@@ -139,9 +139,9 @@ export const Home = ({navigation}) => {
                   source={require('../../images/veg.jpeg')}
                   imageStyle={{borderRadius: 20}}
                   style={styles.categorybackground}>
-                  <Image source={item.img} style={styles.iamgesCategort} />
+                  <Image source={require('../../images/Fwomanp2.png')} style={styles.iamgesCategort} />
                   <View style={styles.categoriesname}>
-                    <Text style={styles.categoriesproductName}>{item.productName}</Text>
+                    <Text style={styles.categoriesproductName} maxLength = {5}>{item.title}</Text>
                     <TouchableOpacity>
                       <Image
                         source={require('../../images/wishlist.png')}
@@ -199,39 +199,34 @@ const featuredData = [
     productName: 'Woman T-shirt',
     img: require('../../images/Fwomanp1.png'),
     key: '1',
-    des:
-      'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.',
+    
   },
   {
     price: '34.00$',
     productName: 'Man T-shirt',
     img: require('../../images/Fmanp.png'),
     key: '2',
-    des:
-      'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.',
+    
   },
   {
     price: '24.00$',
     productName: 'Woman T-Shirt',
     img: require('../../images/Fwomanp2.png'),
     key: '3',
-    des:
-      'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.',
+    
   },
   {
     price: '24.00$',
     productName: 'Woman T-Shirt',
     img: require('../../images/Fwomanp2.png'),
     key: '4',
-    des:
-      'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.',
+   
   },
   {
     price: '24.00$',
     productName: 'Woman T-Shirt',
     img: require('../../images/Fwomanp2.png'),
     key: '5 ',
-    des:
-      'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.',
+   
   },
 ];
